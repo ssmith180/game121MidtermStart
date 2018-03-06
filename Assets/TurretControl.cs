@@ -11,6 +11,9 @@ public class TurretControl : MonoBehaviour {
     public Transform barrelPivotPoint;
     public Transform barrelMouth;
 
+    public GameObject shell;
+
+    public float launchForce = 1000;
 
 	// Use this for initialization
 	void Start () {
@@ -20,5 +23,12 @@ public class TurretControl : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            // FIRE
+            GameObject newShell = GameObject.Instantiate(shell, barrelMouth.transform.position, barrelMouth.transform.rotation);
+            newShell.GetComponent<Rigidbody>().AddForce(newShell.transform.forward * launchForce);
+        }
+
 	}
 }
