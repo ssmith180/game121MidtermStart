@@ -8,6 +8,9 @@ public class TurretControl : MonoBehaviour {
     public float minBarrelElevation = 15.0f;
     public float maxBarrelElevation = 75.0f;
 
+    public Transform barrelPivotPoint;
+    public Transform barrelMouth;
+
 
 	// Use this for initialization
 	void Start () {
