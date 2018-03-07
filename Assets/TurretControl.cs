@@ -11,6 +11,12 @@ public class TurretControl : MonoBehaviour {
     public Transform barrelPivotPoint;
     public Transform barrelMouth;
 
+    public GameObject shell;
+
+    public float shellForce = 1000;
+
+    public float turretRotationRate = 90f;
+    public float barrelRotationRate = 30f;
 
 	// Use this for initialization
 	void Start () {
@@ -20,7 +26,7 @@ public class TurretControl : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-	}
+    }
 
 
 
